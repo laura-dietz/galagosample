@@ -17,7 +17,7 @@ import java.util.Map;
  *  Minimal Example using Galago search API.
  *
  *  There are more parameters and configuration options discusses on the Secret Galago Documentation
- *  https://medium.com/@lauradietz100/galagso-the-secret-documentation-7e1c1b205dda#.9p6t7xvex
+ *  https://medium.com/@lauradietz100/galago-the-secret-documentation-7e1c1b205dda
  *
  *  @author John Foley
  *  @author Laura Dietz
