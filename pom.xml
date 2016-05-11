@@ -48,18 +48,12 @@
                 <enabled>false</enabled>
             </releases>
         </repository>
-        <repository>
-            <id>IESLSnapshotRepo</id>
-            <name>IESL Snapshot Repo</name>
-            <url>https://dev-iesl.cs.umass.edu/nexus/content/repositories/snapshots</url>
-        </repository>
 
-
-        <repository>
-            <id>edu.umass.ciir.snapshots</id>
-            <name>CIIR Nexus Snapshots</name>
-            <url>http://scm-ciir.cs.umass.edu:8080/nexus/content/repositories/snapshots/</url>
-        </repository>
+        <!--<repository>-->
+            <!--<id>edu.umass.ciir.snapshots</id>-->
+            <!--<name>CIIR Nexus Snapshots</name>-->
+            <!--<url>http://scm-ciir.cs.umass.edu:8080/nexus/content/repositories/snapshots/</url>-->
+        <!--</repository>-->
         <repository>
             <id>edu.umass.ciir.releases</id>
             <name>CIIR Nexus Releases</name>

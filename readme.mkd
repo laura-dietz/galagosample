@@ -1,0 +1,33 @@
+Cheatsheet example for retrieving from a Galago search index using the Java API
+================================================================================
+Author: Laura Dietz and John Foley
+
+For complementary information, see article ["Galago - the secret documentation"](https://medium.com/@lauradietz100/galago-the-secret-documentation-7e1c1b205dda)
+
+Dependencies
+------------
+You can use maven to automatically download necessary dependencies. (see below)
+
+Alternatively you can download the galago JARs from here:
+
+* <http://scm-ciir.cs.umass.edu:8080/nexus/content/repositories/releases/org/lemurproject/galago/core/3.8/core-3.8.jar>
+* <http://scm-ciir.cs.umass.edu:8080/nexus/content/repositories/releases/org/lemurproject/galago/utility/3.8/utility-3.8.jar>
+* <http://scm-ciir.cs.umass.edu:8080/nexus/content/repositories/releases/org/lemurproject/galago/eval/3.8/eval-3.8.jar>
+
+Compilation with Maven
+------------------------
+cd into the directory
+
+    $ mvn -U clean compile assembly:single
+
+This will create a jar file for this project in ./target/ 
+Additionally, one JAR file that combines all necessary dependencies with this code into one big jar is created (...with-dependencies.jar)
+
+Running
+----------
+
+You first need to create an index, see   ["Galago - the secret documentation"](https://medium.com/@lauradietz100/galago-the-secret-documentation-7e1c1b205dda)
+The running example assumes that you have access to the wiki-index created by Jeff Dalton, 
+but it is straigh forward to adapt to any Galago index -- as long as it was built with a Galago version of 3.5 or above.
+
+
