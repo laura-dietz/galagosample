@@ -89,6 +89,11 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                         <!--<useUniqueVersions>false</useUniqueVersions>-->
                     </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.lemurproject.galago.core.tools.App</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
             <plugin>
