@@ -1,0 +1,23 @@
+{
+"inputPath":[
+   "data/robust04/docs/ft91.dat.gz",
+   "data/robust04/docs/ft94.dat.gz"
+],
+"indexPath":"./index",
+"index":"./index",
+"tokenizer" : { },
+"stemmer": ["porter"],
+"-stemmer": ["krovetz"],
+"terms": true,
+"tags": true,
+"text": true,
+"metadata": true,
+
+"corpus":true,
+"port":60257,
+"galagoJobDir": "/tmp/galago",
+"deleteJobDir": false,
+"mode":"local"
+}
+
+
