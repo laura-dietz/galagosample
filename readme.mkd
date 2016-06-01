@@ -28,6 +28,12 @@ Running
 
 You first need to create an index, see   ["Galago - the secret documentation"](https://medium.com/@lauradietz100/galago-the-secret-documentation-7e1c1b205dda)
 The running example assumes that you have access to the wiki-index created by Jeff Dalton, 
-but it is straigh forward to adapt to any Galago index -- as long as it was built with a Galago version of 3.5 or above.
+but it is straight-forward to adapt to any Galago index -- as long as it was built with a Galago version of 3.5 or above.
 
 
+```
+$ ./run.sh build galago.json
+$ ./run.sh search --port=2507 --index=./index
+$ ./run.sh batch-search --port=2507 --index=./index --requested=20 queries.json >| result.run
+$ ./run.sh eval --judgments=data/robust04/qrels/robust04.qrels --baseline=result.run --metrics=MAP
+```
