@@ -8,10 +8,13 @@ import org.lemurproject.galago.core.retrieval.RetrievalFactory;
 import org.lemurproject.galago.core.retrieval.ScoredDocument;
 import org.lemurproject.galago.core.retrieval.query.Node;
 import org.lemurproject.galago.core.retrieval.query.StructuredQuery;
+import org.lemurproject.galago.core.tokenize.Tokenizer;
+import org.lemurproject.galago.core.util.WordLists;
 import org.lemurproject.galago.utility.Parameters;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  *  Minimal Example using Galago search API.
@@ -96,6 +99,28 @@ public class GalagoCheatSheet {
                 }
             }
         }
+
+
+
+        // Normalize text the same way Galago does by default
+        System.out.println("normalize text with galago's default tokenizer");
+
+        final Tokenizer tokenizer = Tokenizer.create(Parameters.create());
+        final List<String> tokenizedTerms = tokenizer.tokenize("My various-Formatted text~string. !?").terms;
+        for(String tok:tokenizedTerms){
+            System.out.println(tok);
+        }
+
+        System.out.println("after removing stopwords:");
+
+        // remove stopwords
+        final Set<String> stopwords = WordLists.getWordList("inquery");
+        for(String tok:tokenizedTerms){
+            if(!stopwords.contains(tok)) {
+                System.out.println(tok);
+            }
+        }
+
     }
 
 }
